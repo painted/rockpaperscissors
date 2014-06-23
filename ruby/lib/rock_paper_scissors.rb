@@ -14,9 +14,9 @@ class Game
     return nil if same_pick?
 
     if PAIRS[@player1.pick][:beats] == @player2.pick
-      @player1
+      return @player1
     else
-      @player2
+      return @player2
     end
   end
 
