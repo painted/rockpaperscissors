@@ -2,7 +2,7 @@ function Player(name) {
   this.name = name;
 };
 
-var rock, paper, scissors, beats, lizard, spock;
+var Rock, Paper, Scissors, Lizard, Spock;
 
 Player.prototype.picks = function(pick) {
   this.pick = pick;
@@ -15,25 +15,52 @@ function Game(player1, player2) {
 };
 
 Game.prototype.PAIRS = {
-	'rock': {'beats': ['scissors', 'lizard']},
-	'paper': {'beats': ['rock', 'spock']},
-	'scissors': {'beats': ['paper', 'lizard']},
-	'lizard': {'beats': ['spock', 'paper']},
-	'spock': {'beats': ['rock', 'scissors']}
+	'Rock': {'Scissors': 'crushes','Lizard': 'destroys'},
+	'Paper': {'Rock': 'covers','Spock': 'disproves'},
+	'Scissors': {'Paper': 'cuts','Lizard': 'decapitates'},
+	'Lizard': {'Spock': 'poisons','Paper': 'eats'},
+	'Spock': {'Rock': 'vaporizes','Scissors': 'smashes'}
 }
 
 Game.prototype.winner = function() {
 	if (this._isSamePick()) return null;	
-  	if (this.PAIRS[this.player1.pick]['beats'].indexOf(this.player2.pick) > -1) {
+  	if (this.player1BeatsPlayer2()) {
     return this.player1;
+  } else {
+  	return this.player2;
   }
-  else {return this.player2;}
 };
 
 Game.prototype._isSamePick = function() {
 	return this.player1.pick === this.player2.pick;
 };
 
-// Game.prototype.samePick = function() {
-// 	this.player1.pick === this.player2.pick
-// };
+Game.prototype.player1BeatsPlayer2 = function() {
+	return Object.keys(this.PAIRS[this.player1.pick]).indexOf(this.player2.pick) > -1;
+};
+
+Game.prototype.verb = function() {
+	return this.PAIRS[this.player1.pick][this.player2.pick];
+};
+
+Game.prototype.losingVerb = function() {
+	return this.PAIRS[this.player2.pick][this.player1.pick];
+};
+
+Game.prototype.announcement = function() {
+	if (this.winner() === this.player1) {
+		return this.player1.name + "'s "+ this.player1.pick + " " + this.verb() + " " + this.player2.name + "'s " + this.player2.pick
+	} else {
+		return this.player2.name + "'s "+ this.player2.pick + " " + this.losingVerb() + " " + this.player1.name + "'s " + this.player1.pick
+	}
+};
+
+Game.prototype.winnerName = function() {
+	if (this.winner() === this.player1){
+		return this.player1.name + " wins!"
+	} else if (this.winner() === this.player2){
+		return this.player2.name + " wins!"
+	} else {
+		return this.player1.name + " draws with " + this.player2.name
+	};
+};
