@@ -48,7 +48,9 @@ Game.prototype.losingVerb = function() {
 };
 
 Game.prototype.announcement = function() {
-	if (this.winner() === this.player1) {
+	if (this._isSamePick()) {
+		return "draw!"
+	} else if (this.winner() === this.player1) {
 		return this.player1.name + "'s "+ this.player1.pick + " " + this.verb() + " " + this.player2.name + "'s " + this.player2.pick
 	} else {
 		return this.player2.name + "'s "+ this.player2.pick + " " + this.losingVerb() + " " + this.player1.name + "'s " + this.player1.pick
