@@ -8,7 +8,7 @@ This is my version.
 
 ====================
 
-The project was developed in 5 versions.
+The project was developed in various versions.
 
 ##Version 1:
 
@@ -30,6 +30,10 @@ Deploy to Heroku as a simple Sinatra application.
 
 Added prompts for players to add their names before the first round.
 
+##Possible Future Versions:
+
+Add websockets and sessions so it can be played by two users on different machines.
+
 ====================
 
 ###The programming languages and technologies I used are:
@@ -48,6 +52,15 @@ Added prompts for players to add their names before the first round.
 
   * Click here to play it on your browser: [Play Me on Heroku]
 
+  * Or to play it locally:<br>
+  Run this from the command line:<br>
+  ```
+  git clone https://github.com/painted/rockpaperscissors.git
+  cd rockpaperscissors
+  foreman start
+  ```
+  Then go to localhost:5000 on your browser
+
 ###How to test the application via Jasmine:
 
   * From command line enter:
@@ -57,6 +70,8 @@ git clone https://github.com/painted/rockpaperscissors.git
 cd rockpaperscissors
 open SpecRunner.html
 ```
+
+
 
 [Makers Academy]:http://www.makersacademy.com
 [RockPaperScissorsLizardSpock]:http://en.wikipedia.org/wiki/Rock-paper-scissors-lizard-Spock
