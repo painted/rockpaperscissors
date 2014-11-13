@@ -1,5 +1,5 @@
 ###Rock Paper Scissors Lizard Spock 
-[![Code Climate](https://codeclimate.com/github/painted/FoodPops/badges/gpa.svg)](https://codeclimate.com/github/painted/rockpaperscissors)
+[![Code Climate](https://codeclimate.com/github/painted/rockpaperscissors/badges/gpa.svg)](https://codeclimate.com/github/painted/rockpaperscissors)
 
 Rock Paper Scissors Lizard Spock is the Week 7 project we worked on at [Makers Academy].<br>
 We created an interface to let two people play [RockPaperScissorsLizardSpock], written in JavaScript and tested with [Jasmine](http://jasmine.github.io/).<br>
