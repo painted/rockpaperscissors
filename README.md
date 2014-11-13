@@ -4,7 +4,7 @@ Rock Paper Scissors Lizard Spock is the Week 7 project we worked on at [Makers A
 We created an interface to let two people play [RockPaperScissorsLizardSpock], written in JavaScript and tested with [Jasmine](http://jasmine.github.io/).<br>
 This is my version.
 
-![Rock-Paper-Scissors-Lizard-Spock](** Place Image URL HERE **)
+![Rock-Paper-Scissors-Lizard-Spock](http://www.paintedchef.com/images/RockPaperScissors.png)
 
 ====================
 
@@ -53,7 +53,7 @@ Added prompts for players to add their names before the first round.
   * From command line enter:
 ```
 bash
-git clone https://github.com/federicomaffei/rockpaperscissors
+git clone https://github.com/painted/rockpaperscissors.git
 cd rockpaperscissors
 open SpecRunner.html
 ```
