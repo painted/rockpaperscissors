@@ -1,4 +1,5 @@
 ###Rock Paper Scissors Lizard Spock 
+
 [![Code Climate](https://codeclimate.com/github/painted/rockpaperscissors/badges/gpa.svg)](https://codeclimate.com/github/painted/rockpaperscissors)
 
 Rock Paper Scissors Lizard Spock is the Week 7 project we worked on at [Makers Academy].<br>
